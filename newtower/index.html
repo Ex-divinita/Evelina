@@ -8,7 +8,7 @@
     <style>
         /* Custom styles for the luxury aesthetic with image background */
         .hero-background {
-            background-image: url('main.jpg'); /* Your provided image */
+            background-image: url('https://i.imgur.com/GgS0q1A.jpeg'); /* Your provided image */
             background-size: cover;
             background-position: center;
             position: relative;
@@ -51,7 +51,32 @@
 </head>
 <body class="bg-page-bg text-gray-900 font-sans antialiased">
 
-    <!-- Hero Section with Background Image --><header class="hero-background py-20 md:py-32 relative">
+    <!-- Top Navigation Bar --><nav class="bg-tertiary-dark-red text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Site Title -->
+                <a href="#top" class="text-xl font-bold uppercase tracking-wider text-primary-red hover:text-white transition duration-200">LUX-ALBANIA HOME</a>
+                
+                <!-- Navigation Links (Desktop) -->
+                <div class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="#top" class="text-secondary-red font-semibold hover:text-white transition duration-200 border-b-2 border-secondary-red pb-1">New Tower</a>
+                    <a href="#" class="font-semibold hover:text-secondary-red transition duration-200 pb-1">Palase Vlora</a>
+                    <a href="#" class="font-semibold hover:text-secondary-red transition duration-200 pb-1">Lalzi</a>
+                    <a href="#" class="font-semibold hover:text-secondary-red transition duration-200 pb-1">Lake Villa</a>
+                    <a href="#" class="font-semibold hover:text-secondary-red transition duration-200 pb-1">12 Floors</a>
+                </div>
+
+                <!-- Mobile Menu Button (Placeholder for responsiveness) -->
+                <div class="md:hidden">
+                    <button class="p-2 rounded-md hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-secondary-red">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Image --><header id="top" class="hero-background py-20 md:py-32 relative">
         <div class="hero-overlay"></div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <p class="text-secondary-red uppercase tracking-widest text-sm font-semibold mb-3">Tirana, Albania</p>
