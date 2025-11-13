@@ -21,12 +21,12 @@
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.4); /* Darker overlay for text readability */
         }
-        /* Custom gradient for other sections, inspired by the image's warmth */
+        /* Custom gradient for other sections, using monochromatic reds */
         .warm-gradient {
-            background-image: linear-gradient(to right top, #711e19, #8c2a23, #a73c33);
+            background-image: linear-gradient(to right top, #BE332A, #9f2a23);
         }
         .accent-border {
-            border-image: linear-gradient(to right, #e2b47e, #c7926b) 1; /* Lighter, warm gold for contrast */
+            border-image: linear-gradient(to right, #9f2a23, #BE332A) 1; /* Monochromatic gradient for contrast */
             border-width: 2px;
             border-style: solid;
         }
@@ -39,22 +39,22 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'primary-red-brown': '#711e19', /* Main color from your request */
-                        'accent-gold': '#e2b47e', /* Lighter gold from the image for highlights */
-                        'light-bg': '#D9FFF8', /* New light background color */
-                        'dark-card': '#2c2c2c', /* Darker card background (retained for contrast) */
+                        'primary-red': '#BE332A',    /* Main Accent: Lightest Red/Crimson */
+                        'secondary-red': '#9f2a23', /* Secondary Accent: Mid-tone Red/Crimson */
+                        'tertiary-dark-red': '#7F221C',  /* Dark Sections/Cards: Deepest Red/Crimson */
+                        'page-bg': '#f3f4f6',        /* Neutral light gray background for readability */
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-light-bg text-gray-900 font-sans antialiased">
+<body class="bg-page-bg text-gray-900 font-sans antialiased">
 
     <!-- Hero Section with Background Image --><header class="hero-background py-20 md:py-32 relative">
         <div class="hero-overlay"></div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <p class="text-accent-gold uppercase tracking-widest text-sm font-semibold mb-3">Tirana, Albania</p>
+            <p class="text-secondary-red uppercase tracking-widest text-sm font-semibold mb-3">Tirana, Albania</p>
             <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-tight mb-4 text-white">
                 Tirana New Tower
             </h1>
@@ -62,7 +62,7 @@
                 Albania's Skyline Icon – **Luxury Redefined. Investment Secured.**
             </p>
             <div class="mt-10">
-                <a href="#contact" class="inline-block px-8 py-3 bg-primary-red-brown text-white font-bold text-lg rounded-xl shadow-lg hover:bg-red-800 transition duration-300">
+                <a href="#contact" class="inline-block px-8 py-3 bg-primary-red text-white font-bold text-lg rounded-xl shadow-lg hover:bg-red-800 transition duration-300">
                     Inquire Now
                 </a>
             </div>
@@ -77,25 +77,25 @@
             </p>
 
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <!-- Feature 1 --><div class="p-6 rounded-xl bg-dark-card shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
-                    <svg class="w-10 h-10 text-accent-gold mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 20h6"></path></svg>
+                <!-- Feature 1 --><div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
+                    <svg class="w-10 h-10 text-secondary-red mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 20h6"></path></svg>
                     <h3 class="text-2xl font-semibold mb-2">Iconic Altitude</h3>
                     <p class="text-gray-300">Tirana's tallest tower with 39 floors of exclusive apartments and office spaces.</p>
                 </div>
-                <!-- Feature 2 --><div class="p-6 rounded-xl bg-dark-card shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
-                    <svg class="w-10 h-10 text-accent-gold mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3 .895-3 2s1.343 2 3 2m0-8V4m0 12v4"></path></svg>
+                <!-- Feature 2 --><div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
+                    <svg class="w-10 h-10 text-secondary-red mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3 .895-3 2s1.343 2 3 2m0-8V4m0 12v4"></path></svg>
                     <h3 class="text-2xl font-semibold mb-2">Investment Ready</h3>
                     <p class="text-gray-300">Projected 7–12% rental yield in the city’s fastest-growing commercial district.</p>
                 </div>
-                <!-- Feature 3 --><div class="p-6 rounded-xl bg-dark-card shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
-                    <svg class="w-10 h-10 text-accent-gold mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-3M8 11h3m-3 0h3"></path></svg>
+                <!-- Feature 3 --><div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
+                    <svg class="w-10 h-10 text-secondary-red mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-3M8 11h3m-3 0h3"></path></svg>
                     <h3 class="text-2xl font-semibold mb-2">Exclusive Amenities</h3>
                     <p class="text-gray-300">24/7 security, concierge service, and a planned rooftop infinity pool (2027).</p>
                 </div>
             </div>
             
             <!-- Image Carousel Placeholder --><div class="mt-16 pt-10 border-t border-gray-300">
-                <h3 class="text-3xl font-bold text-center mb-6 text-primary-red-brown">Gallery & Interiors Preview</h3>
+                <h3 class="text-3xl font-bold text-center mb-6 text-primary-red">Gallery & Interiors Preview</h3>
                 <div class="h-96 w-full bg-gray-200 rounded-xl flex items-center justify-center border-4 border-dashed border-gray-400">
                     <p class="text-gray-600 text-lg font-semibold">
                         Image Carousel Placeholder: Future Renders of Apartments and Amenities
@@ -105,7 +105,7 @@
         </div>
     </section>
 
-    <!-- Pricing Table Section --><section class="py-16 md:py-24 bg-dark-card">
+    <!-- Pricing Table Section --><section class="py-16 md:py-24 bg-tertiary-dark-red">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold mb-4 text-center text-white">Altitude Pricing & Experience</h2>
             <p class="text-gray-400 text-lg text-center max-w-3xl mx-auto mb-12">
@@ -116,33 +116,33 @@
                 <table class="min-w-full divide-y divide-gray-700">
                     <thead class="bg-gray-900">
                         <tr>
-                            <th class="px-6 py-4 text-left text-xs font-medium text-accent-gold uppercase tracking-wider">Floor Range</th>
-                            <th class="px-6 py-4 text-left text-xs font-medium text-accent-gold uppercase tracking-wider">Price per m²</th>
-                            <th class="px-6 py-4 text-left text-xs font-medium text-accent-gold uppercase tracking-wider">Residential Vibe</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-secondary-red uppercase tracking-wider">Floor Range</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-secondary-red uppercase tracking-wider">Price per m²</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-secondary-red uppercase tracking-wider">Residential Vibe</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-dark-card divide-y divide-gray-700">
-                        <tr class="hover:bg-gray-700 transition duration-150">
+                    <tbody class="divide-y divide-gray-700">
+                        <tr class="hover:bg-red-900 transition duration-150">
                             <td class="px-6 py-4 whitespace-nowrap font-medium text-white">5 – 14</td>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-300">€2,500</td>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-400">Urban Energy, Vibrant Street Life Below</td>
                         </tr>
-                        <tr class="hover:bg-gray-700 transition duration-150">
+                        <tr class="hover:bg-red-900 transition duration-150">
                             <td class="px-6 py-4 whitespace-nowrap font-medium text-white">15 – 19</td>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-300">€2,900</td>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-400">Golden Mid-Rise Serenity</td>
                         </tr>
-                        <tr class="hover:bg-gray-700 transition duration-150">
+                        <tr class="hover:bg-red-900 transition duration-150">
                             <td class="px-6 py-4 whitespace-nowrap font-medium text-white">20 – 24</td>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-300">€3,300</td>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-400">Cloud-Level Calm, First-Class Views</td>
                         </tr>
-                        <tr class="hover:bg-gray-700 transition duration-150">
+                        <tr class="hover:bg-red-900 transition duration-150">
                             <td class="px-6 py-4 whitespace-nowrap font-medium text-white">25 – 29</td>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-300">€3,600</td>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-400">Elite Altitude, Exclusive Neighbors</td>
                         </tr>
-                        <tr class="hover:bg-gray-700 transition duration-150 bg-primary-red-brown accent-border">
+                        <tr class="hover:bg-primary-red transition duration-150 bg-primary-red accent-border">
                             <td class="px-6 py-4 whitespace-nowrap font-extrabold text-white text-lg">30 – 39</td>
                             <td class="px-6 py-4 whitespace-nowrap font-extrabold text-white text-lg">€4,000</td>
                             <td class="px-6 py-4 whitespace-nowrap font-extrabold text-white text-lg">PENTHOUSE PRESTIGE – LIVE IN THE SKY</td>
@@ -155,7 +155,7 @@
 
     <!-- Video Placeholder Section --><section class="py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-3xl font-bold text-center mb-6 text-primary-red-brown">Explore the Vision in Motion</h3>
+            <h3 class="text-3xl font-bold text-center mb-6 text-primary-red">Explore the Vision in Motion</h3>
             <div class="relative w-full max-w-4xl mx-auto" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio --><div class="absolute inset-0 bg-gray-200 rounded-xl flex items-center justify-center border-4 border-dashed border-gray-400">
                     <p class="text-gray-600 text-lg font-semibold">
                         Video Placeholder: Project Walkthrough & Lifestyle Preview
@@ -173,12 +173,12 @@
                 Contact **LUX-ALBANIA HOME**, the exclusive sales partner, for detailed floor plans, legal support, and to arrange an off-plan consultation.
             </p>
 
-            <div class="bg-dark-card p-8 rounded-xl max-w-md mx-auto shadow-2xl">
+            <div class="bg-tertiary-dark-red p-8 rounded-xl max-w-md mx-auto shadow-2xl">
                 <div class="space-y-4">
                     <p class="text-lg font-semibold text-white">Talk to our Sales Team:</p>
                     
                     <div class="flex items-center justify-center space-x-2">
-                         <!-- Phone Icon --><svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                         <!-- Phone Icon --><svg class="w-6 h-6 text-secondary-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                         <span class="text-white text-xl font-mono">+355 69 517-31-01</span>
                     </div>
 
