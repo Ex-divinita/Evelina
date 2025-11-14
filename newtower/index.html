@@ -13,16 +13,14 @@
 
     <style>
         /* --- Slider Customization --- */
-        /* Force the slider to fill the container */
         img-comparison-slider {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
         
-        /* Style the Handle (the circle with arrows) */
         img-comparison-slider::part(handle) {
-            background-color: rgba(255, 255, 255, 0.2); /* Glassy effect */
+            background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
             border: 2px solid white;
             color: white;
@@ -31,16 +29,15 @@
             height: 50px;
         }
 
-        /* Style the Divider Line */
         img-comparison-slider::part(divider) {
-            background-color: #BE332A; /* Your Primary Red */
+            background-color: #BE332A;
             width: 3px;
         }
 
         /* --- Layout & Gradients --- */
         .hero-container {
             position: relative;
-            min-height: 85vh; /* Takes up mostly full screen */
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -53,9 +50,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%); /* Vignette effect */
-            z-index: 10; /* Above slider */
-            pointer-events: none; /* Allows clicks to pass through to the slider */
+            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+            z-index: 10;
+            pointer-events: none;
         }
 
         .accent-border {
@@ -73,10 +70,10 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'primary-red': '#BE332A',    /* Main Accent */
-                        'secondary-red': '#9f2a23',  /* Secondary Accent */
-                        'tertiary-dark-red': '#7F221C', /* Dark Sections */
-                        'page-bg': '#f3f4f6',        /* Background */
+                        'primary-red': '#BE332A',
+                        'secondary-red': '#9f2a23',
+                        'tertiary-dark-red': '#7F221C',
+                        'page-bg': '#f3f4f6',
                     }
                 }
             }
@@ -90,8 +87,9 @@
             <div class="flex justify-between items-center h-16">
                 
                 <a href="#top" class="flex-shrink-0 flex items-center">
-                    <img class="h-10 w-auto" src="/assets/logo_short.jpg" alt="Lux-Albania Home Logo">
+                    <img class="h-10 w-auto" src="../assets/logo_short.jpg" alt="Lux-Albania Home Logo">
                 </a>
+                
                 <div class="hidden md:flex space-x-6 lg:space-x-8">
                     <a href="newtower" class="font-semibold hover:text-secondary-red transition duration-200 pb-1 border-b-2 border-transparent hover:border-secondary-red">Home</a> 
                     <a href="newtower" class="font-semibold hover:text-secondary-red transition duration-200 pb-1 border-b-2 border-transparent hover:border-secondary-red">New Tower</a> 
@@ -110,10 +108,10 @@
         </div>
     </nav>
 
-    <header id="top" class="hero-container pt-16"> <img-comparison-slider class="absolute inset-0 z-0 focus:outline-none">
-            <img slot="first" src="assets/main1.jpg" class="w-full h-full object-cover" alt="View of the Adriatic Sea">
-            
-            <img slot="second" src="assets/main2.jpg" class="w-full h-full object-cover" alt="Luxury Interior">
+    <header id="top" class="hero-container pt-16">
+        <img-comparison-slider class="absolute inset-0 z-0 focus:outline-none">
+            <img slot="first" src="../assets/main1.jpg" class="w-full h-full object-cover" alt="View of the Adriatic Sea">
+            <img slot="second" src="../assets/main2.jpg" class="w-full h-full object-cover" alt="Luxury Interior">
         </img-comparison-slider>
 
         <div class="hero-overlay"></div>
@@ -123,8 +121,9 @@
             <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-tight mb-4 text-white drop-shadow-xl">
                 New Boulevard Tower
             </h1>
-            <p  <p class="text-white uppercase tracking-widest text-sm font-semibold mb-3 bg-black/50 inline-block px-2 py-1 rounded">
-                 Albania – Luxury Redefined. Investment Secured.
+            
+            <p class="text-white uppercase tracking-widest text-sm font-semibold mb-3 bg-black/50 inline-block px-2 py-1 rounded">
+                Albania – Luxury Redefined. Investment Secured.
             </p>
             
             <div class="mt-6 text-white/70 text-sm animate-pulse">
@@ -133,14 +132,15 @@
                 </span>
             </div>
 
-            <div class="mt-10 pointer-events-auto"> <a href="#contact" class="inline-block px-8 py-3 bg-primary-red text-white font-bold text-lg rounded-xl shadow-lg hover:bg-red-800 hover:scale-105 transition duration-300 border border-white/20">
+            <div class="mt-10 pointer-events-auto">
+                <a href="#contact" class="inline-block px-8 py-3 bg-primary-red text-white font-bold text-lg rounded-xl shadow-lg hover:bg-red-800 hover:scale-105 transition duration-300 border border-white/20">
                     Inquire Now
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Overview Section --><section class="py-16 md:py-24">
+    <section class="py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold mb-4 text-center">The Vision</h2>
             <p class="text-gray-600 text-xl text-center max-w-4xl mx-auto mb-12">
@@ -148,48 +148,47 @@
             </p>
 
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <!-- Feature 1 --><div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
+                <div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
                     <svg class="w-10 h-10 text-secondary-red mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 20h6"></path></svg>
                     <h3 class="text-2xl font-semibold mb-2">Iconic Altitude</h3>
                     <p class="text-gray-300">Tirana's tallest tower with 39 floors of exclusive apartments and office spaces.</p>
                 </div>
-                <!-- Feature 2 --><div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
+                <div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
                     <svg class="w-10 h-10 text-secondary-red mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3 .895-3 2s1.343 2 3 2m0-8V4m0 12v4"></path></svg>
                     <h3 class="text-2xl font-semibold mb-2">Investment Ready</h3>
                     <p class="text-gray-300">Projected 7–12% rental yield in the city’s fastest-growing commercial district.</p>
                 </div>
-                <!-- Feature 3 --><div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
+                <div class="p-6 rounded-xl bg-tertiary-dark-red shadow-2xl transition duration-300 hover:scale-[1.02] text-white">
                     <svg class="w-10 h-10 text-secondary-red mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-3M8 11h3m-3 0h3"></path></svg>
                     <h3 class="text-2xl font-semibold mb-2">Exclusive Amenities</h3>
                     <p class="text-gray-300">24/7 security, concierge service, and a planned rooftop infinity pool (2027).</p>
                 </div>
             </div>
             
-            <!-- Image Carousel Placeholder -->
-        <div class="mt-16 pt-10 border-t border-gray-300">
-        <h3 class="text-3xl font-bold text-center mb-6 text-primary-red">Gallery & Interiors Preview</h3>
-            
-            <div class="swiper h-96 w-full rounded-xl">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="assets/newtower1.jpg" alt="Interior 1" class="w-full h-full object-cover">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/newtower2.jpg" alt="Interior 2" class="w-full h-full object-cover">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/newtower3.jpg" alt="Amenity" class="w-full h-full object-cover">
-                    </div>
+            <div class="mt-16 pt-10 border-t border-gray-300">
+                <h3 class="text-3xl font-bold text-center mb-6 text-primary-red">Gallery & Interiors Preview</h3>
+                
+                <div class="swiper h-96 w-full rounded-xl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../assets/newtower1.jpg" alt="Interior 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/newtower2.jpg" alt="Interior 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/newtower3.jpg" alt="Amenity" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-             </div>
+            </div>
         </div>
     </section>
 
-    <!-- Pricing Table Section --><section class="py-16 md:py-24 bg-tertiary-dark-red">
+    <section class="py-16 md:py-24 bg-tertiary-dark-red">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold mb-4 text-center text-white">Altitude Pricing & Experience</h2>
             <p class="text-gray-400 text-lg text-center max-w-3xl mx-auto mb-12">
@@ -237,10 +236,10 @@
         </div>
     </section>
 
-    <!-- Video Placeholder Section --><section class="py-16 md:py-24">
+    <section class="py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 class="text-3xl font-bold text-center mb-6 text-primary-red">Explore the Vision in Motion</h3>
-            <div class="relative w-full max-w-4xl mx-auto" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio --><div class="absolute inset-0 bg-gray-200 rounded-xl flex items-center justify-center border-4 border-dashed border-gray-400">
+            <div class="relative w-full max-w-4xl mx-auto" style="padding-top: 56.25%;"> <div class="absolute inset-0 bg-gray-200 rounded-xl flex items-center justify-center border-4 border-dashed border-gray-400">
                     <p class="text-gray-600 text-lg font-semibold">
                         Video Placeholder: Project Walkthrough & Lifestyle Preview
                     </p>
@@ -249,11 +248,10 @@
         </div>
     </section>
 
-    <!-- Map -->
     <div class="container mx-auto px-4 py-12"> 
         <h3 class="text-3xl font-bold text-center mb-6 text-primary-red">Our Location</h3> 
         <div class="overflow-hidden rounded-xl shadow-lg">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1655.376395745759!2d19.813707714283613!3d41.338972626911634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1763106797595!5m2!1sen!2s" 
+            <iframe src="http://googleusercontent.com/maps.google.com/3" 
                 class="w-full h-96"
                 style="border:0;" 
                 allowfullscreen="" 
@@ -261,10 +259,9 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
          </div>
-     </div>
+    </div>
 
-
-   <section id="contact" class="py-16 md:py-24">
+    <section id="contact" class="py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold mb-4">Contact Our Team Today</h2>
             <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
@@ -275,31 +272,34 @@
                 <div class="space-y-4">
                     <p class="text-lg font-bold text-white">Talk to our Sales Team:</p>
                     
-                    <!-- Updated Contact Info Grid -->
-                    <div classs="grid grid-cols-1 md:grid-cols-3 gap-4 text-white font-mono text-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-white font-mono text-lg">
+                        
                         <div class="flex items-center justify-center space-x-2">
-                            <svg class="w-7 h-7 font-semibold text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            
-                            <span class="font-semibold text-white text-xl">+355 69 586 3189 </span>
-                            <span class="text-white text-lg">Albanian/English/Russian</span>
+                            <svg class="w-7 h-7 flex-shrink-0 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <div>
+                                <span class="font-semibold text-white text-xl block">+355 69 586 3189</span>
+                                <span class="text-gray-300 text-sm">Alb/Eng/Rus</span>
+                            </div>
                         </div>
                         
                         <div class="flex items-center justify-center space-x-2">
-                            <svg class="w-7 h-7 font-semibold text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            
-                            <span class="font-semibold text-white text-xl">+355 69 431 8839</span>
-                            <span class="text-white text-lg">Russian</span>
+                            <svg class="w-7 h-7 flex-shrink-0 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <div>
+                                <span class="font-semibold text-white text-xl block">+355 69 431 8839</span>
+                                <span class="text-gray-300 text-sm">Russian</span>
+                            </div>
                         </div>
                         
                         <div class="flex items-center justify-center space-x-2">
-                            <svg class="w-7 h-7 font-semibold text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            
-                            <span class="font-semibold text-white text-xl">+355 69 586 5154</span>
-                            <span class="text-white text-lg">English/Chinese/Russian</span>
+                            <svg class="w-7 h-7 flex-shrink-0 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <div>
+                                <span class="font-semibold text-white text-xl block">+355 69 586 5154</span>
+                                <span class="text-gray-300 text-sm">Eng/Chi/Rus</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <p class="text-gray-400 text-sm italic">
+                    <p class="text-gray-400 text-sm italic pt-4">
                         All numbers available on WhatsApp.
                     </p>
                 </div>
@@ -309,12 +309,25 @@
 
     <footer class="bg-gray-900 border-t border-gray-700 py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            &copy; 2025 Lux-Albania Home Property
+            © 2025 Lux-Albania Home Property
         </div>
     </footer>
 
-    <!-- Java -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
 
 </body>
 </html>
