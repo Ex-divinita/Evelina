@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux-Albania Home – Premium Real Estate</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.css"/>
+    
+    <style>
+        /* --- Slider Customization --- */
+        img-comparison-slider {
+            width: 100%;
+            height: 100%;
+        }
+        
+        img-comparison-slider::part(handle) {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border: 2px solid white;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Using the new gold accent for the slider divider */
+        img-comparison-slider::part(divider) {
+            background-color: #B8860B; /* gold-accent */
+            width: 3px;
+        }
+
+        /* --- Layout & Gradients --- */
+        .hero-container {
+            position: relative;
+            min-height: 70vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        @media (min-width: 768px) {
+            .hero-container {
+                min-height: 85vh;
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        /* Update accent border to use new gold color */
+        .accent-border {
+            border-image: linear-gradient(to right, #B8860B, #FFD700) 1; /* Gold shades */
+            border-width: 2px;
+            border-style: solid;
+        }
+
+        /* Styling for the new property cards */
+        .property-card-image {
+            aspect-ratio: 1 / 1; /* Creates the 1:1 square shape */
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // NEW DARK PALETTE
+                        'dark-coal': '#1C1C1C',         /* Primary Background */
+                        'dark-slate': '#2A2A2A',        /* Secondary Background, Nav */
+                        'gold-accent': '#B8860B',       /* Main Accent Color (Dark Goldenrod) */
+                        'light-gray': '#E0E0E0',        /* Main Text Color */
+                        'muted-gray': '#888888',        /* Secondary Text / Subtle Borders */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<!-- Apply primary background color to body --><body class="bg-dark-coal text-light-gray font-sans antialiased">
+
+    <!-- UPDATED NAVIGATION with dark background and light text --><nav class="bg-dark-slate text-light-gray shadow-lg fixed w-full z-50 top-0 left-0">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <a href="index.html" class="flex-shrink-0 flex items-center">
+                    <!-- Your logo might need a white/light version for dark background --><img class="h-10 w-auto" src="assets/logo_short_light.png" alt="Lux-Albania Home Logo">
+                </a>
+                
+                <!-- DESKTOP NAVIGATION WITH DROPDOWNS --><div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="index.html" class="font-semibold hover:text-gold-accent transition duration-200 pb-1 border-b-2 border-gold-accent">Home</a> 
+                    
+                    <!-- Tirana Projects Dropdown --><div class="relative group">
+                        <button class="font-semibold hover:text-gold-accent transition duration-200 pb-1 border-b-2 border-transparent hover:border-gold-accent flex items-center">
+                            <span>Tirana Projects</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <!-- Dropdown menu background updated --><div class="absolute left-0 mt-0 w-48 bg-dark-slate shadow-lg rounded-md overflow-hidden z-10 hidden group-hover:block border border-muted-gray">
+                            <a href="newtower.html" class="block px-4 py-2 text-sm text-light-gray hover:bg-dark-coal hover:text-gold-accent">New Tower</a>
+                            <a href="lakevilla.html" class="block px-4 py-2 text-sm text-light-gray hover:bg-dark-coal hover:text-gold-accent">Lake Villa</a>
+                            <a href="12floor.html" class="block px-4 py-2 text-sm text-light-gray hover:bg-dark-coal hover:text-gold-accent">12 Floors</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Coastal Properties Dropdown --><div class="relative group">
+                        <button class="font-semibold hover:text-gold-accent transition duration-200 pb-1 border-b-2 border-transparent hover:border-gold-accent flex items-center">
+                            <span>Coastal Properties</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <!-- Dropdown menu background updated --><div class="absolute left-0 mt-0 w-48 bg-dark-slate shadow-lg rounded-md overflow-hidden z-10 hidden group-hover:block border border-muted-gray">
+                            <a href="vlora.html" class="block px-4 py-2 text-sm text-light-gray hover:bg-dark-coal hover:text-gold-accent">Palase Vlora</a>
+                            <a href="lalzi.html" class="block px-4 py-2 text-sm text-light-gray hover:bg-dark-coal hover:text-gold-accent">Lalzi</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE MENU BUTTON --><div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 rounded-md focus:outline-none">
+                        <!-- Icon color updated for dark nav --><svg class="w-6 h-6 text-light-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU (Hidden by default) --><!-- Mobile menu background updated --><div id="mobile-menu" class="hidden md:hidden bg-dark-slate border-t border-muted-gray shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gold-accent bg-dark-coal">Home</a>
+                
+                <h3 class="px-3 pt-2 text-xs font-semibold text-muted-gray uppercase tracking-wider">Tirana Projects</h3>
+                <a href="newtower.html" class="block px-3 py-2 rounded-md text-base font-medium text-light-gray hover:bg-dark-coal hover:text-gold-accent">New Tower</a>
+                <a href="lakevilla.html" class="block px-3 py-2 rounded-md text-base font-medium text-light-gray hover:bg-dark-coal hover:text-gold-accent">Lake Villa</a>
+                <a href="12floor.html" class="block px-3 py-2 rounded-md text-base font-medium text-light-gray hover:bg-dark-coal hover:text-gold-accent">12 Floors</a>
+                
+                <h3 class="px-3 pt-2 text-xs font-semibold text-muted-gray uppercase tracking-wider">Coastal Properties</h3>
+                <a href="vlora.html" class="block px-3 py-2 rounded-md text-base font-medium text-light-gray hover:bg-dark-coal hover:text-gold-accent">Palase Vlora</a>
+                <a href="lalzi.html" class="block px-3 py-2 rounded-md text-base font-medium text-light-gray hover:bg-dark-coal hover:text-gold-accent">Lalzi</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="top" class="hero-container pt-16">
+        <img-comparison-slider class="absolute inset-0 z-0 focus:outline-none">
+            <img slot="first" src="assets/main1.jpg" class="w-full h-full object-cover" alt="View of the Adriatic Sea">
+            <img slot="second" src="assets/main2.jpg" class="w-full h-full object-cover" alt="Luxury Interior">
+        </img-comparison-slider>
+
+        <div class="hero-overlay"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 pointer-events-none">
+            <!-- Text colors updated --><p class="text-light-gray uppercase tracking-widest text-sm font-semibold mb-3 bg-black/50 inline-block px-2 py-1 rounded">Tirana, Albania</p>
+            
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight mb-4 text-light-gray drop-shadow-xl">
+                Lux Albania Home
+            </h1>
+            
+            <p class="text-light-gray uppercase tracking-widest text-sm font-semibold mb-3 bg-black/50 inline-block px-2 py-1 rounded">
+                Albania – Luxury Redefined. Investment Secured.
+            </p>
+            
+            <div class="mt-6 text-muted-gray text-sm animate-pulse">
+                <span class="bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm">
+                    ← Drag Slider to Compare View & Interior →
+                </span>
+            </div>
+
+            <div class="mt-10 pointer-events-auto">
+                <!-- Button color updated to gold accent --><a href="#contact" class="inline-block px-8 py-3 bg-gold-accent text-dark-coal font-bold text-lg rounded-xl shadow-lg hover:bg-dark-coal hover:text-gold-accent transition duration-300 border border-light-gray/20">
+                    Inquire Now
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Text color updated --><h2 class="text-4xl font-bold mb-4 text-gold-accent">Invest in Your Albanian Dream</h2>
+            <p class="text-light-gray text-xl max-w-4xl mx-auto">
+                At Lux-Albania Home, we specialize in curating a portfolio of Albania's most prestigious properties. From iconic skyline towers in Tirana to serene beachfront villas in Vlora, our team provides expert guidance, legal support, and exclusive access to secure your perfect home or investment.
+            </p>
+        </div>
+    </section>
+
+    <!-- "Our Properties" Grid Section with dark background and light elements --><section id="properties" class="py-16 md:py-24 bg-dark-slate">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gold-accent">Explore Our Exclusive Properties</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Property Card 1: New Tower --><div class="bg-dark-coal rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl hover:scale-[1.02] border border-dark-coal hover:border-gold-accent">
+                    <img src="assets/newtower.jpg" alt="Tirana New Tower" class="w-full h-48 object-cover property-card-image">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-light-gray">Tirana New Tower</h3>
+                        <p class="text-muted-gray mb-4">The new 39-floor icon of the Tirana skyline, offering luxury residences and offices.</p>
+                        <a href="newtower.html" class="inline-block px-6 py-2 bg-gold-accent text-dark-coal font-semibold rounded-lg shadow-md hover:bg-dark-coal hover:text-gold-accent transition duration-300 border border-transparent hover:border-gold-accent">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 2: Palase Vlora --><div class="bg-dark-coal rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl hover:scale-[1.02] border border-dark-coal hover:border-gold-accent">
+                    <img src="assets/palasevlora.jpg" alt="Palase Vlora" class="w-full h-48 object-cover property-card-image">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-light-gray">Palase Vlora</h3>
+                        <p class="text-muted-gray mb-4">Exclusive beachfront villas and apartments on the stunning Albanian Riviera.</p>
+                        <a href="vlora.html" class="inline-block px-6 py-2 bg-gold-accent text-dark-coal font-semibold rounded-lg shadow-md hover:bg-dark-coal hover:text-gold-accent transition duration-300 border border-transparent hover:border-gold-accent">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 3: Lalzi --><div class="bg-dark-coal rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl hover:scale-[1.02] border border-dark-coal hover:border-gold-accent">
+                    <img src="assets/lalzybay.jpg" alt="Lalzi Bay" class="w-full h-48 object-cover property-card-image">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-light-gray">Lalzi Bay Resort</h3>
+                        <p class="text-muted-gray mb-4">A premium resort community offering a tranquil and luxurious coastal lifestyle.</p>
+                        <a href="lalzi.html" class="inline-block px-6 py-2 bg-gold-accent text-dark-coal font-semibold rounded-lg shadow-md hover:bg-dark-coal hover:text-gold-accent transition duration-300 border border-transparent hover:border-gold-accent">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 4: Lake Villa --><div class="bg-dark-coal rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl hover:scale-[1.02] border border-dark-coal hover:border-gold-accent">
+                    <img src="assets/villalake.jpg" alt="Lake Villa" class="w-full h-48 object-cover property-card-image">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-light-gray">Lake Villa</h3>
+                        <p class="text-muted-gray mb-4">Serene and modern villas with breathtaking views of Tirana's artificial lake.</p>
+                        <a href="lakevilla.html" class="inline-block px-6 py-2 bg-gold-accent text-dark-coal font-semibold rounded-lg shadow-md hover:bg-dark-coal hover:text-gold-accent transition duration-300 border border-transparent hover:border-gold-accent">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 5: 12 Floors --><div class="bg-dark-coal rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl hover:scale-[1.02] border border-dark-coal hover:border-gold-accent">
+                    <img src="assets/12floors.png" alt="12 Floors" class="w-full h-48 object-cover property-card-image">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-light-gray">12 Floors</h3>
+                        <p class="text-muted-gray mb-4">A modern residential building in a prime urban location, perfect for city living.</p>
+                        <a href="12floor.html" class="inline-block px-6 py-2 bg-gold-accent text-dark-coal font-semibold rounded-lg shadow-md hover:bg-dark-coal hover:text-gold-accent transition duration-300 border border-transparent hover:border-gold-accent">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with dark background and light text --><section id="contact" class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gold-accent">Contact Our Team Today</h2>
+            <p class="text-light-gray text-lg max-w-2xl mx-auto mb-10">
+                Contact Lux-Albania Home, the exclusive sales partner, for detailed floor plans, legal support, consultation and property showcases.
+            </p>
+
+            <!-- Contact box with dark background, light text, and gold accents --><div class="bg-dark-slate p-8 rounded-xl max-w-2xl mx-auto shadow-2xl">
+                <div class="space-y-4">
+                    <p class="text-lg font-bold text-light-gray">Talk to our Sales Team:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-light-gray font-mono text-lg">
+            
+                        <!-- Phone numbers without icons --><div class="flex flex-col items-center justify-center">
+                            <span class="font-semibold text-light-gray text-lg block whitespace-nowrap">+355 69 586 3189</span>
+                            <span class="text-muted-gray text-xs whitespace-nowrap">Alb/Eng/Rus</span>
+                        </div>
+                        
+                        <div class="flex flex-col items-center justify-center">
+                            <span class="font-semibold text-light-gray text-lg block whitespace-nowrap">+355 69 431 8839</span>
+                            <span class="text-muted-gray text-xs whitespace-nowrap">Russian</span>
+                        </div>
+                        
+                        <div class="flex flex-col items-center justify-center">
+                            <span class="font-semibold text-light-gray text-lg block whitespace-nowrap">+355 69 586 5154</span>
+                            <span class="text-muted-gray text-xs whitespace-nowrap">Eng/Chi/Rus</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-muted-gray text-sm italic pt-4">
+                        All numbers available on WhatsApp.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with dark background and light text --><footer class="bg-dark-coal border-t border-muted-gray py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-muted-gray text-sm">
+            &copy; 2025 Lux-Albania Home Property
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR MOBILE MENU --><script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Optional: Change icon on toggle
+                if (mobileMenu.classList.contains('hidden')) {
+                    // Icon color updated for dark nav
+                    menuButton.innerHTML = `<svg class="w-6 h-6 text-light-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>`;
+                } else {
+                    // Icon color updated for dark nav
+                    menuButton.innerHTML = `<svg class="w-6 h-6 text-light-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
