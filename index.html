@@ -33,6 +33,25 @@
             width: 3px;
         }
 
+        /* --- NEW CSS RULE TO FIX MOBILE IMAGE SIZING --- */
+        /*
+         * This forces both images inside the slider to fill the container's height.
+         * 'object-fit: cover' handles the cropping so they fill the space
+         * without being distorted.
+        */
+        img-comparison-slider img {
+            min-height: 70vh; /* Match the mobile hero-container height */
+            object-fit: cover !important; /* Force cover behavior */
+            object-position: center; /* Center the image */
+        }
+        @media (min-width: 768px) {
+            img-comparison-slider img {
+                min-height: 85vh; /* Match the desktop hero-container height */
+            }
+        }
+        /* --- END OF NEW RULE --- */
+
+
         /* --- Layout & Gradients --- */
         .hero-container {
             position: relative;
@@ -188,7 +207,8 @@
         </div>
     </header>
     
-    <section class="py-16 md:py-24">
+    <!-- Added id="about-us" for the new footer link -->
+    <section id="about-us" class="py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <!-- Text color updated --><h2 class="text-4xl font-bold mb-4 text-gold-accent">Invest in Your Albanian Dream</h2>
             <p class="text-light-gray text-xl max-w-4xl mx-auto">
@@ -294,14 +314,67 @@
                     <p class="text-muted-gray text-sm italic pt-4">
                         All numbers available on WhatsApp.
                     </p>
+
+                    <!-- ADDED EMAIL CONTACT -->
+                    <p class="text-light-gray text-lg pt-4">
+                        or contact us via email:
+                        <a href="mailto:info@lahomealbania.com" class="text-gold-accent font-semibold hover:underline">info@lahomealbania.com</a>
+                    </p>
+                    <!-- END OF ADDED EMAIL -->
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer with dark background and light text --><footer class="bg-dark-coal border-t border-muted-gray py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-muted-gray text-sm">
-            &copy; 2025 LA Home Albania Property
+    <!-- NEW FOOTER SECTION --><footer class="bg-dark-coal border-t border-muted-gray py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Logo & About -->
+                <div class="space-y-4">
+                    <a href="/">
+                        <img class="h-16 w-auto" src="assets/logodark_t.png" alt="Lux-Albania Home Logo">
+                    </a>
+                    <p class="text-muted-gray text-sm pr-4">
+                        Curating Albania's most prestigious properties for investment and luxury living.
+                    </p>
+                </div>
+
+                <!-- Tirana Projects -->
+                <div>
+                    <h4 class="text-sm font-semibold text-light-gray tracking-wider uppercase">Tirana Projects</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="newtower/" class="text-muted-gray hover:text-gold-accent transition-colors duration-200">New Tower</a></li>
+                        <li><a href="lakevilla/" class="text-muted-gray hover:text-gold-accent transition-colors duration-200">Lake Villa</a></li>
+                        <li><a href="12floor/" class="text-muted-gray hover:text-gold-accent transition-colors duration-200">12 Floors</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coastal Properties -->
+                <div>
+                    <h4 class="text-sm font-semibold text-light-gray tracking-wider uppercase">Coastal Properties</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="vlora/" class="text-muted-gray hover:text-gold-accent transition-colors duration-200">Palase Vlora</a></li>
+                        <li><a href="lalzi/" class="text-muted-gray hover:text-gold-accent transition-colors duration-200">Lalzi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-light-gray tracking-wider uppercase">Company</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="/" class="text-muted-gray hover:text-gold-accent transition-colors duration-200">Home</a></li>
+                        <li><a href="#about-us" class="text-muted-gray hover:text-gold-accent transition-colors duration-200">About Us</a></li>
+                        <li><a href="#contact" class="text-muted-gray hover:text-gold-accent transition-colors duration-2D00">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar (Copyright) -->
+            <div class="mt-12 border-t border-muted-gray pt-8 text-center text-muted-gray text-sm">
+                &copy; 2025 LA Home Albania Property
+            </div>
         </div>
     </footer>
 
